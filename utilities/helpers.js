@@ -426,7 +426,7 @@ async function get_group_information_by_user(user_id, markus_id) {
         let groups = await getJSON(process.env.MARKUS_API + "assignments/" + markus_id + "/groups.json", null, { "Authorization": "MarkUsAuth " + process.env.MARKUS_AUTH });
         for (let group of groups) {
             for (let member of group["members"]) {
-                if (member["user_id"] === user_id) {
+                if (member["role_id"] === user_id) {
                     found_index = index;
                 }
             }
@@ -439,7 +439,7 @@ async function get_group_information_by_user(user_id, markus_id) {
         // Get the group information based on the group index
         for (let member of groups[found_index]["members"]) {
             if (member["membership_status"] === "accepted" || member["membership_status"] === "inviter") {
-                users_requests.push(await getJSON(process.env.MARKUS_API + "roles/" + member["user_id"] + ".json", null, { "Authorization": "MarkUsAuth " + process.env.MARKUS_AUTH }));
+                users_requests.push(await getJSON(process.env.MARKUS_API + "roles/" + member["role_id"] + ".json", null, { "Authorization": "MarkUsAuth " + process.env.MARKUS_AUTH }));
             }
         }
         let users_info = await Promise.all(users_requests);
@@ -459,7 +459,7 @@ async function get_group_information_by_group_name(group_name, markus_id) {
             if (group["group_name"] === group_name) {
                 for (let member of group["members"]) {
                     if (member["membership_status"] === "accepted" || member["membership_status"] === "inviter") {
-                        users_requests.push(await getJSON(process.env.MARKUS_API + "roles/" + member["user_id"] + ".json", null, { "Authorization": "MarkUsAuth " + process.env.MARKUS_AUTH }));
+                        users_requests.push(await getJSON(process.env.MARKUS_API + "roles/" + member["role_id"] + ".json", null, { "Authorization": "MarkUsAuth " + process.env.MARKUS_AUTH }));
                     }
                 }
             }
