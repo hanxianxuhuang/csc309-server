@@ -47,7 +47,7 @@ const rate_limit = require("./setup/rate_limit");
 const studentsRouter = require('./routes/student');
 const interviewsTaRouter = require('./routes/ta');
 const adminsRouter = require('./routes/admin');
-app.use('/', rate_limit.general_limiter);
+// app.use('/', rate_limit.general_limiter);
 
 app.get("/", (req, res) => {
     res.status(418).json({ message: "Why are you here??? LOL --Howie" });
