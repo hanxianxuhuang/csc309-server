@@ -7,7 +7,7 @@ const general_limiter = rateLimit({
 });
 
 const token_limiter = rateLimit({
-	max: 3,
+	max: 10,
 	windowMs: 60 * 60 * 1000,
 	message: "You sent too many 'token' requests! Try again in one hour!"
 });

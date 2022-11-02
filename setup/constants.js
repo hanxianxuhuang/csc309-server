@@ -8,7 +8,7 @@ module.exports = {
         "pf_mentor_2": { open_student: false, open_ta: true, length: 15, markus_id: 23, exclude: [] },
         "pf": { open_student: false, open_ta: true, length: 60, markus_id: 23, exclude: ["pb"] },
         "a1": { open_student: true, open_ta: true, length: 10, markus_id: 19, exclude: [] },
-        "a2": { open_student: false, open_ta: true, length: 10, markus_id: 20, exclude: [] },
+        "a2": { open_student: true, open_ta: true, length: 10, markus_id: 20, exclude: [] },
         "a3": { open_student: false, open_ta: true, length: 10, markus_id: 21, exclude: [] }
     },
     weights: { "a1": 10, "a2": 15, "a3": 20, "pb": 25, "pf": 30 },
