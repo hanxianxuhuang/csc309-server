@@ -8,7 +8,7 @@ router.post("/submit", (req, res) => {
         res.status(400).json({ message: "The student is missing or has invalid format." });
         return;
     }
-    if (!("task" in req.body) || helpers.name_validate(req.body["task"])) {
+    if (!("task" in req.body) || helpers.string_validate(req.body["task"])) {
         res.status(400).json({ message: "The task is missing or has invalid format." });
         return;
     }
