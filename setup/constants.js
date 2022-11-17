@@ -1,7 +1,7 @@
 module.exports = {
     rows_count: 45,
     tasks: {
-        "pb_mentor_1": { open_student: true, open_ta: true, length: 15, markus_id: 22, exclude: [] },
+        "pb_mentor_1": { open_student: false, open_ta: true, length: 15, markus_id: 22, exclude: [] },
         "pb_mentor_2": { open_student: true, open_ta: true, length: 15, markus_id: 22, exclude: [] },
         "pb": { open_student: false, open_ta: true, length: 30, markus_id: 22, exclude: ["pf"] },
         "pf_mentor_1": { open_student: false, open_ta: true, length: 15, markus_id: 23, exclude: [] },
