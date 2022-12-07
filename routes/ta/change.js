@@ -4,7 +4,7 @@ const client = require("../../setup/db");
 const helpers = require("../../utilities/helpers");
 
 router.put("/:task/change", (req, res) => {
-	let filter = helpers.query_filter(req.body);
+	let filter = helpers.query_filter(req.body, res.locals["ta"]);
 	let set = helpers.query_set(req.body);
 
 	if (filter === "") {

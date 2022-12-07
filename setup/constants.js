@@ -2,14 +2,14 @@ module.exports = {
     rows_count: 45,
     tasks: {
         "pb_mentor_1": { open_student: false, open_ta: true, length: 15, markus_id: 22, exclude: [] },
-        "pb_mentor_2": { open_student: true, open_ta: true, length: 15, markus_id: 22, exclude: [] },
-        "pb": { open_student: false, open_ta: true, length: 30, markus_id: 22, exclude: ["pf"] },
+        "pb_mentor_2": { open_student: false, open_ta: true, length: 15, markus_id: 22, exclude: [] },
+        "pb": { open_student: true, open_ta: true, length: 45, markus_id: 22, exclude: ["pf"] },
         "pf_mentor_1": { open_student: false, open_ta: true, length: 15, markus_id: 23, exclude: [] },
-        "pf_mentor_2": { open_student: false, open_ta: true, length: 15, markus_id: 23, exclude: [] },
-        "pf": { open_student: false, open_ta: true, length: 60, markus_id: 23, exclude: ["pb"] },
+        "pf_mentor_2": { open_student: true, open_ta: true, length: 15, markus_id: 23, exclude: [] },
+        "pf": { open_student: true, open_ta: true, length: 50, markus_id: 23, exclude: ["pb"] },
         "a1": { open_student: true, open_ta: true, length: 10, markus_id: 19, exclude: [] },
         "a2": { open_student: true, open_ta: true, length: 10, markus_id: 20, exclude: [] },
-        "a3": { open_student: false, open_ta: true, length: 10, markus_id: 21, exclude: [] }
+        "a3": { open_student: true, open_ta: true, length: 10, markus_id: 21, exclude: [] }
     },
     weights: { "a1": 10, "a2": 15, "a3": 20, "pb": 25, "pf": 30 },
     max: { "pf": 50 },
