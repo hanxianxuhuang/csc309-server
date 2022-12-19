@@ -85,6 +85,7 @@ router.post("/upload", upload.single("file"), (req, res) => {
                 client.query(format(sql_upload, marks_data), [], (err, pgRes) => {
                     if (err) {
                         res.status(404).json({ message: "Unknown error." });
+                        console.log(err);
                     } else if (skipped_count === 0) {
                         let message = pgRes.rowCount + " marks are changed. " + (marks_data.length - pgRes.rowCount) + " marks are unchanged.";
                         res.status(200).json({ message: message });

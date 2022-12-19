@@ -52,9 +52,9 @@ const adminsRouter = require('./routes/admin');
 app.get("/", (req, res) => {
     res.status(418).json({ message: "Why are you here??? LOL --Howie" });
 })
-app.use('/', studentsRouter);
-app.use('/ta', interviewsTaRouter);
 app.use('/admin', adminsRouter);
+app.use('/ta', interviewsTaRouter);
+app.use('/', studentsRouter);
 
 // Error handling
 app.use((req, res, next) => {
